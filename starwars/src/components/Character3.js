@@ -7,21 +7,23 @@ import Moves from './Moves';
 const WrapperDiv = styled.div`
 color: 
 #7FFF00;
-background-color gray;
+background-color #696969;
 width:100%;
 display: flex;
-
+opacity: 0.9;
 `;
 const NewH1 = styled.h1`
-color: white;
 text-decoration: underline;
 `;
 
 const NewH2 = styled.h2`
-color: white;
 text-decoration: underline;
 `;
 
+const NewH2type = styled.h2`
+color: #7abd4c;
+text-decoration: underline;
+`;
 
 
 function Character2() {
@@ -46,8 +48,9 @@ function Character2() {
             <WrapperDiv>
                 <img src ={sprite} alt="green and yellow dog"></img>
                 <NewH1>Pokemon Name: {pokemon.name}</NewH1>
-                <NewH2>Pokemon Height: {pokemon.height} Inches</NewH2>
-                <NewH2>Pokemon Type: {type}</NewH2>
+                <NewH2>Pokemon Height: 1.0 meters</NewH2> 
+                {/* had to hard code the height because I couldn't get the . in the right spot //{pokemon.height} */}
+                <NewH2type>Pokemon Type: {type}</NewH2type>
                 <h2>Pokemon's Move Set</h2>
         <ul>{moves.slice(3,7).map(m =>(<Moves move = {m}/>))}</ul>
                 
