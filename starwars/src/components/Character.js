@@ -7,21 +7,23 @@ import Moves from './Moves';
 
 const WrapperDiv = styled.div`
 color: pink;
-background-color gray;
+background-color #696969;
 width:100%;
 display: flex;
+opacity: 0.9;
 `;
 const NewH1 = styled.h1`
-color: white;
 text-decoration: underline;
 `;
 
 const NewH2 = styled.h2`
-color: white;
 text-decoration: underline;
 `;
 
-
+const NewH2type = styled.h2`
+color: #a6a879;
+text-decoration: underline;
+`;
 
 function Character() {
     const [pokemon, setPokemon] = useState ([]);
@@ -45,8 +47,8 @@ function Character() {
             <WrapperDiv>
                 <img src ={sprite} alt="Pink and white cat"></img>
                 <NewH1>Pokemon Name: {pokemon.name}</NewH1>
-                <NewH2>Pokemon Height: {pokemon.height} Inches</NewH2>
-                <NewH2>Pokemon Type: {type}</NewH2>
+                <NewH2>Pokemon Height: .{pokemon.height} meters</NewH2>
+                <NewH2type>Pokemon Type: {type}</NewH2type>
                 <h2>Pokemon's Move Set</h2>
         <ul>{moves.slice(3,7).map(m =>(<Moves move = {m}/>))}</ul>
                 
